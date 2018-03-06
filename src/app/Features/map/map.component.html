@@ -1,0 +1,16 @@
+<div>
+<h2>{{ title }}</h2>
+<div class="form-group">
+  <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" 
+  type="text" class="location-search" #search [formControl]="searchControl">
+</div>
+<agm-map [latitude]="latitude" [longitude]="longitude">
+  <agm-marker [latitude]="latitude" [longitude]="longitude">
+    <agm-info-window>
+      <p>1313 Disneyland Dr, Anaheim, CA 92802</p>
+      <a target="_blank" href="https://www.google.com/maps/place/1313+Disneyland+Dr,+Anaheim,+CA+92802?hl=en">Directions</a></agm-info-window>
+  </agm-marker>
+</agm-map>
+<p>Latitude: {{latitude}}</p>
+<p>Longitude: {{longitude}}</p>
+</div>

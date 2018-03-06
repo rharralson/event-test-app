@@ -1,0 +1,9 @@
+<div class="form-group">
+<label for="category">Select Category</label>
+<select #categorySelect [(ngModel)]="selectedCategory" 
+(ngModelChange)="categorySelectChange($event)" name="category">
+    <option *ngFor="let c of categories" [ngValue]="c">
+          {{c.name}}
+     </option>
+</select>
+</div>
